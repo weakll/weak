@@ -1,7 +1,6 @@
 {
-  "rootDirectory": "frontend",
   "buildCommand": "",
-  "outputDirectory": "dist",
+  "outputDirectory": "frontend/dist",
   "framework": "vite",
   "rewrites": [
     {
