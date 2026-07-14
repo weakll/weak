@@ -1,7 +1,7 @@
 {
   "buildCommand": "",
   "outputDirectory": "frontend/dist",
-  "framework": "vite",
+  "framework": "static",
   "rewrites": [
     {
       "source": "/api/(.*)",
