@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir gunicorn psycopg[binary] dj-database-url
 
 COPY . .
 RUN chmod +x start.sh
-RUN python manage.py collectstatic --noinput || true
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 
