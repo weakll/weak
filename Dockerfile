@@ -33,7 +33,7 @@ COPY . .
 RUN python manage.py collectstatic --noinput || true
 
 # Expose port
-EXPOSE 8000
+EXPOSE $PORT
 
 # Run gunicorn
-CMD ["gunicorn", "night_market.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4", "--timeout", "120"]
+CMD gunicorn night_market.wsgi:application --bind 0.0.0.0:$PORT --workers 4 --timeout 120
