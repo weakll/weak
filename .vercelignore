@@ -1,4 +1,4 @@
-﻿# Vercel only needs the frontend directory
+# Vercel only needs the frontend directory
 requirements.txt
 manage.py
 setup_mysql.py
