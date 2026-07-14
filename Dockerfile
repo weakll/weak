@@ -1,4 +1,4 @@
-﻿# Use Python 3.13 (stable, close to 3.14 used in dev)
+# Use Python 3.13 (stable, close to 3.14 used in dev)
 FROM python:3.13-slim
 
 # Set environment variables
