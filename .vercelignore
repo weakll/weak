@@ -1,0 +1,12 @@
+﻿# Vercel only needs the frontend directory
+requirements.txt
+manage.py
+setup_mysql.py
+Dockerfile
+railway.json
+market
+night_market
+db.sqlite3
+test_write.txt
+PITFALLS.md
+AGENTS.md
