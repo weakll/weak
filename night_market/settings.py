@@ -31,7 +31,7 @@ ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',') if os.envi
 # Allow Vercel and Railway proxy hosts
 ALLOWED_HOSTS += ['.vercel.app', '.railway.app']
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '').split(',') if os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS') else ['https://*.vercel.app', 'https://*.railway.app']
+CSRF_TRUSTED_ORIGINS = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '').split(',') if os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS') else ['http://localhost:5173', 'https://*.vercel.app', 'https://*.railway.app']
 
 
 # Application definition
@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
 CORS_ALLOW_CREDENTIALS = True
 
 MIDDLEWARE = [
