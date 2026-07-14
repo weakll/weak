@@ -3,6 +3,10 @@
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {
+      "source": "/static/(.*)",
+      "destination": "https://weak-production.up.railway.app/static/$1"
+    },
+    {
       "source": "/admin/(.*)",
       "destination": "https://weak-production.up.railway.app/admin/$1"
     },
