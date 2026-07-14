@@ -1,0 +1,90 @@
+/* Mobile-first styles: base = 375px, enhanced for tablet/desktop */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 56px;  /* reduced for mobile navbar */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', -apple-system, sans-serif;
+  background-color: #14120e;
+  color: #e0d6c8;
+  line-height: 1.5;
+  font-size: 14px;  /* mobile base */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+/* Responsive typography */
+@media (min-width: 768px) {
+  body { font-size: 15px; line-height: 1.6; }
+  html { scroll-padding-top: 64px; }
+}
+@media (min-width: 1024px) {
+  body { font-size: 16px; }
+  html { scroll-padding-top: 70px; }
+}
+
+/* Interactive touch targets */
+button, a, input, select, textarea {
+  min-height: 44px;  /* iOS minimum touch target */
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  touch-action: manipulation;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+input, textarea, select {
+  font-family: inherit;
+  font-size: 16px;  /* prevents iOS zoom on focus */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scrollbar - only on desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #14120e; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,107,53,0.3); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,107,53,0.5); }
+}
+
+#app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Utility: responsive container */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (min-width: 768px) {
+  .container { padding: 0 24px; }
+}
+@media (min-width: 1024px) {
+  .container { padding: 0 32px; }
+}
